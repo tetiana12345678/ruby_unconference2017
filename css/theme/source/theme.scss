@@ -1,0 +1,386 @@
+/**
+ * Ktec theme for reveal.js
+ * Author: Walther http://github.com/ktec
+ *
+ * Designed to be used with highlight.js theme
+ * "monokai_sublime.css" available from
+ * https://github.com/isagalaev/highlight.js/
+ *
+ * For other themes, change $codeBackground accordingly.
+ *
+ */
+
+ // Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+// @import url("/lib/font/justanotherhand/justanotherhand.css");
+// @import url("/lib/font/aclonica/aclonica.css");
+// @import url("/lib/font/opensans/opensans.css");
+// @import url("/lib/font/arapey/arapey.css");
+@import url("/lib/font/firasans/firasans.css");
+@import url("/lib/font/courgette/courgette.css");
+@import url("/lib/font/lato/lato.css");
+// @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+
+// Colors used in the theme
+
+$color1: #540D6E;
+$color2: #EE4266;
+$color3: #FFD23F;
+$color4: #3BCEAC;
+$color5: #0EAD69;
+$color6: #e1e1e1;
+$color7: #551a8b;
+
+$fontOpacity: 0.9;
+
+$codeBackground: $color6;
+
+$backgroundColor: #FFF;
+
+// Main text
+$mainFont: 'Firasans Light', 'sans-serif';
+$mainFontSize: 2.6em;
+$mainColor: #ccbcd2;
+
+// Headings
+$headingFont: 'Firasans Bold', 'sans-serif';
+$headingTextShadow: none;
+
+$heading1Size: 2.77em;
+$heading2Size: 1.66em;
+$heading3Size: 1.22em;
+$heading4Size: 1.00em;
+
+$paragraphSize: 1.00em;
+
+$code1Size: 1.3em;
+$code2Size: 0.7em;
+$code3Size: 0.5em;
+
+// Transition Speeds
+$fastTransition: 4ms;
+$slowTransition: 1ms;
+
+// h1 shadow, borrowed humbly from
+// (c) Default theme by Hakim El Hattab
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+// Links
+$linkColor: $color1;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: $color1;
+$selectionColor: $color3;
+
+
+#footer {
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	height: 4vh;
+	width: 100%;
+	font-size: 4vh;
+	text-align: center;
+	letter-spacing: 0em;
+	padding-top: 1.5vh;
+	padding-bottom: 1.5vh;
+	p {
+		color: #fff;
+		opacity: $fontOpacity;
+		display: inline;
+		&.right {
+			float: right;
+			padding-right: 2.5vh;
+		}
+		&.left {
+			float: left;
+			padding-left: 2.5vh;
+		}
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// .reveal .slides section {
+// 	padding: 3em;
+// 	width: 100%;
+// 	// height: 100%;
+// }
+//
+// .reveal .slides > section,
+// .reveal .slides > section > section {
+// 	width: auto;
+// }
+//
+// some overrides after theme template import
+.reveal section img.plain {
+	background: none;
+  border: 0;
+  box-shadow: none; }
+
+.reveal section img.rounded {
+	background: none;
+  border: 0;
+  box-shadow: none;
+	border-radius: 20px;
+}
+
+.reveal blockquote {
+	display: block;
+	position: relative;
+	width: 90%;
+	margin: $blockMargin auto;
+	padding: 5px;
+
+	font-size: 120%;
+	font-style: italic;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+}
+
+.reveal p {
+    font-weight: 300;
+}
+
+.reveal .slides section .fragment.visible {
+	opacity: $fontOpacity;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  // padding: 0.5rem;
+}
+
+.reveal h1 {
+	// background-color: rgba(0, 0, 0, 0.2);
+}
+
+.reveal h2 {
+	margin-top: 0.5em;
+}
+
+.reveal blockquote span.one {
+	font-family: 'LatoLightItalic';
+	font-size: 38px;
+}
+
+// .reveal .cultivate {
+//
+// }
+
+// .cultivate div.slides img {
+// 	margin: 0;
+// 	width: 80%;
+// }
+//
+// .cultivate div.slides img.logo {
+// 	margin: 0;
+// 	width: 20%;
+// 	position: absolute;
+// 	bottom: 0px;
+// 	right: 0px;
+// }
+
+// .cultivate div.slides h1 {
+// 	font-family: 'LatoBold';
+// 	// font-size: 78px;
+// 	line-height: 1em;
+// }
+// .cultivate div.slides h2 {
+// 	font-family: 'LatoBold';
+// 	font-size: 58px;
+// 	line-height: 1em;
+// }
+//
+// .reveal .cult_1 {
+// 	font-family: 'LatoBold';
+// 	font-size: 78px;
+// 	line-height: 1em;
+// 	margin: 0;
+// }
+// .reveal .cult_2 {
+// 	font-family: 'LatoLight';
+// 	font-size: 68px;
+// 	line-height: 1em;
+// 	margin: 0;
+// }
+// .reveal .cult_3 {
+// 	font-family: 'LatoBold';
+// 	font-size: 28px;
+// }
+//
+// .erlang-solutions div.slides h1 {
+// 	font-family: 'LatoBold';
+// 	font-size: 78px;
+// 	line-height: 1em;
+// }
+// .erlang-solutions div.slides h2 {
+// 	font-family: 'LatoBold';
+// 	font-size: 58px;
+// 	line-height: 1em;
+// }
+
+// .reveal .citylights {
+//   font-size: 285%;
+//   color: #fff;
+// 	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $color3, 0 0 30px $color3, 0 0 40px $color3, 0 0 50px $color3, 0 0 75px $color3;
+// 	letter-spacing: 5px;
+// }
+
+/*********************************************
+ * CODE
+ *********************************************/
+
+@import "./code-style";
+
+.reveal pre {
+	margin-bottom: 20px
+}
+.reveal code {
+	display: block;
+	margin: auto 20px;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+	padding: 20px 40px;
+	text-align: left;
+	// font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	overflow: auto;
+	word-wrap: normal;
+	font-family: "source-code-pro", Consolas, monospace !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: $code2Size;
+	color: #000;
+	background-color: $codeBackground;
+	border-radius: 7px;
+}
+
+code {
+}
+
+.reveal .large {
+	font-size: $code1Size;
+}
+
+.reveal .medium {
+	font-size: $code2Size;
+}
+
+.reveal .small {
+	font-size: $code3Size;
+}
+
+.reveal p code {
+  display: inline-block;
+}
+
+.reveal small code {
+  vertical-align: baseline;
+}
+
+@import "./kenburns";
+
+// .slideshow {
+//   position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .slideshow-image {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background: no-repeat 50% 50%;
+//   background-size: cover;
+//   -webkit-animation-name: kenburns;
+//   animation-name: kenburns;
+//   -webkit-animation-timing-function: linear;
+//   animation-timing-function: linear;
+//   -webkit-animation-iteration-count: infinite;
+//   animation-iteration-count: infinite;
+//   -webkit-animation-duration: 16s;
+//   animation-duration: 16s;
+//   opacity: 1;
+//   -webkit-transform: scale(1.2);
+//   transform: scale(1.2);
+// }
+
+// .reveal .backgrounds slide-background.kenburns {
+// 	background-image: url('https://unsplash.it/1600/1400?image=492');
+//   background: no-repeat 50% 50%;
+//   background-size: cover;
+//   // -webkit-animation-name: kenburns-1;
+//   // 				animation-name: kenburns-1;
+//   // -webkit-animation-timing-function: linear;
+//   // 				animation-timing-function: linear;
+//   // -webkit-animation-iteration-count: infinite;
+//   // 				animation-iteration-count: infinite;
+//   // -webkit-animation-duration: 16s;
+//   // 				animation-duration: 16s;
+//   opacity: 1;
+//   // -webkit-transform: scale(1.2);
+//   // 				transform: scale(1.2);
+// }
+
+
+// .slideshow-image:nth-child(1) {
+//   -webkit-animation-name: kenburns-1;
+//   				animation-name: kenburns-1;
+//   							 z-index: 3;
+// }
+//
+// .slideshow-image:nth-child(2) {
+//   -webkit-animation-name: kenburns-2;
+//   animation-name: kenburns-2;
+//   z-index: 2;
+// }
+//
+// .slideshow-image:nth-child(3) {
+//   -webkit-animation-name: kenburns-3;
+//   animation-name: kenburns-3;
+//   z-index: 1;
+// }
+//
+// .slideshow-image:nth-child(4) {
+//   -webkit-animation-name: kenburns-4;
+//   animation-name: kenburns-4;
+//   z-index: 0;
+// }
+
+.white {
+	color: #e1e1e1;
+}
+
+
+.purple1 { color: #ddd2e1 }
+.purple2 { color: #ccbcd2 }
+.purple3 { color: #bba6c3 }
+.purple4 { color: #aa90b4 }
+.purple5 { color: #9979a5 }
+.purple6 { color: #886396 }
+.purple7 { color: #774d87 }
+.purple8 { color: #663778 }
+.purple9 { color: #552169 }
+.purple10 { color: #450b5b }
+.purple11 { color: #3f0a53 }
+.purple12 { color: #390a4b }
+.purple13 { color: #330943 }
+.purple14 { color: #2c083a }
+.purple15 { color: #260632 }
+.purple16 { color: #20052a }
+.purple17 { color: #1a0422 }
+.purple18 { color: #130319 }
+.purple19 { color: #0d0211 }
+.purple20 { color: #070109 }
+.purple21 { color: #DDD2E1 }
+.purple22 { color: #540D6E }

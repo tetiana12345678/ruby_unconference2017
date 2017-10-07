@@ -1,0 +1,10 @@
+@keyframes kenburns {
+  0% {
+    transform: translate3d(0px, 0px, 0px); }
+  100% {
+    transform: translate3d(-40px, -40px, 300px); } }
+
+@keyframes kenburns2 {
+  0% { }
+  100% {
+    opacity: 0; } }

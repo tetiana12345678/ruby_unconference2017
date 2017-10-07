@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Arapey Regular';
+    src: url('Arapey-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arapey Italic';
+    src: url('Arapey-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
